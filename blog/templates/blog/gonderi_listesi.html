@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Bilgisayar Kavramları</title>
+    </head>
+    <body>
+        <div>
+             <h1><a href="/">Bilgisayar Kavramları Blog</a></h1>
+        </div>
+
+        {% for gonderi in gonderiler %}
+                <div>    
+                    <h1><a href="">{{ gonderi.baslik }}</a></h1>
+                    <p>{{ gonderi.icerik|linebreaks }}</p>
+                    <a href=""><p>{{ gonderi.tag|linebreaks }}</p></a>
+                    <p>Yayınlandı {{ gonderi.y_tarihi }}</p>    
+                </div>
+        {% endfor %}
+            </body>
+</html>
